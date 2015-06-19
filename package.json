@@ -1,0 +1,13 @@
+{
+  "dependencies": {
+    "body-parser": "^1",
+    "cheerio": "^0.19.0",
+    "express": "^4",
+    "jade": "^1",
+    "node-phantom-simple": "^1.2.0",
+    "phantom": "^0.7.2",
+    "phantomjs": "^1.9.17",
+    "request": "^2.57.0",
+    "x-ray": "^2.0.0"
+  }
+}
