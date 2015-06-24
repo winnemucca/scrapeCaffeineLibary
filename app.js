@@ -29,10 +29,13 @@ phantom.create(function(err,ph) {
 
             $("tbody[role='alert'] tr").each(function(data){
             	  var json = {};
-            	  json.name= $(this).children(':first-child').text();
+            	  json.name= $(this).children(':first-child').find('a').text();
             	  json.size= $(this).children(':nth-child(2)').text();
             	  json.caffeine= $(this).children(':nth-child(3)').text();
             	  json.mgFloz=$(this).children(':last-child').text();
+                json.url=$(this).children(':first-child').html();
+                json.url=$(this).children(':first-child').find('a').attr('href');
+
 
             	nameArray.push(json);
             });
@@ -45,9 +48,9 @@ phantom.create(function(err,ph) {
           		// var json= {name:"",size:"",caffeine:"",mgFloz:""};
             console.log(result);
 
-            fs.writeFile('caffeineScrape.json',JSON.stringify(result,null,4),function(err){
-            	console.log('file successfully written')
-            });
+            // fs.writeFile('caffeineList.json',JSON.stringify(result,null,4),function(err){
+            // 	console.log('file successfully written')
+            // });
             
 
             ph.exit();
