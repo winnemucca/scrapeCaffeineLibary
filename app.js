@@ -48,9 +48,9 @@ phantom.create(function(err,ph) {
           		// var json= {name:"",size:"",caffeine:"",mgFloz:""};
             console.log(result);
 
-            // fs.writeFile('caffeineList.json',JSON.stringify(result,null,4),function(err){
-            // 	console.log('file successfully written')
-            // });
+            fs.writeFile('caffeineList.json',JSON.stringify(result,null,4),function(err){
+            	console.log('file successfully written')
+            });
             
 
             ph.exit();
